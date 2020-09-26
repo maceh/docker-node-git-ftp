@@ -1,7 +1,5 @@
 FROM node:latest
 
-ENV DEBIAN_FRONTEND noninteractive
-
 # setup workdir
 RUN mkdir -p /root/work/
 WORKDIR /root/work/
@@ -18,3 +16,5 @@ RUN apt-get -y update \
 
 # run a CMD to show git is installed
 CMD git help
+
+ENTRYPOINT /bin/bash
